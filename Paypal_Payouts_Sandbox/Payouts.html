@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>PayPal Payouts</title>
+    <script src="Scripts/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+
+    <script>
+        let url = "https://api.sandbox.paypal.com/v1/oauth2/token"
+        let access_token = '';
+        let client_id = 'ARWRVgHVPoDo3qDwr1Zauj-4qgx5tTc-rf0XoBqkbOqHMKBaFWi1vPqZRGZAFGg0sOJKhxyhOH95U9Wr';
+        let client_secret = 'EI9I1YFWVMKRiXqVAfzax-EKfOV38ZQJ-cjaTFBEtjH7Zf9wp2heLOiq-16LWpEVomLfjFLJe-GegTpO';
+     async   function get_Access_Token() {
+
+            var auth = 'Basic ' + btoa(client_id + ':' + client_secret).toString('base64');
+
+            console.log("Auth Basic: " + auth)
+
+         fetch(url, {
+             method: 'POST',
+             headers: {
+                 'content-type': 'application/x-www-form-urlencoded',
+                 'accept': 'application/json',
+                 'accept-language': 'en_US',
+                 'authorization': auth,
+
+             },
+             body: 'grant_type=client_credentials'
+             ,
+         })
+             .then((response) => response.json())
+             .then((data) => {
+                 console.log('Success:', data);
+                 access_token = data.access_token;
+                 console.log("access_token: " + access_token)
+             })
+             .catch((error) => {
+                 console.error('Error:', error);
+             });
+        }
+        window.onunload = get_Access_Token();
+    </script>
+</body>
+</html>
