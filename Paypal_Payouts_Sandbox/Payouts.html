@@ -46,6 +46,9 @@
         let payout_url = "https://api.sandbox.paypal.com/v1/payments/payouts"
         let payouts_batch_url = 'https://api.sandbox.paypal.com/v1/payments/payouts/'
         let btn_send_to_paypal = document.getElementById('btn_send_to_paypal');
+
+        //Replace with your client_ID and Client for sandbox or live app on paypal.
+        //https://developer.paypal.com/developer/applications
         let client_id = 'ARWRVgHVPoDo3qDwr1Zauj-4qgx5tTc-rf0XoBqkbOqHMKBaFWi1vPqZRGZAFGg0sOJKhxyhOH95U9Wr';
         let client_secret = 'EI9I1YFWVMKRiXqVAfzax-EKfOV38ZQJ-cjaTFBEtjH7Zf9wp2heLOiq-16LWpEVomLfjFLJe-GegTpO';
 
@@ -179,19 +182,12 @@
         //convert csv to array
         function csvToArray(str, delimiter = ",") {
             console.log("raw: " + str)
-            // slice from start of text to the first \n index
-            // use split to create an array from string by delimiter
+
             const headers = str.slice(0, str.indexOf("\n")).split(delimiter);
 
-            // slice from \n index + 1 to the end of the text
-            // use split to create an array of each csv value row
+
             const rows = str.slice(str.indexOf("\n") + 1).split("\n");
 
-            // Map the rows
-            // split values from each row into an array
-            // use headers.reduce to create an object
-            // object properties derived from headers:values
-            // the object passed as an element of the array
             const arr = rows.map(function (row) {
                 const values = row.split(delimiter);
                 const el = headers.reduce(function (object, header, index) {
@@ -201,7 +197,7 @@
                 return el;
             });
 
-            // return the array
+
             return arr;
         }
 
