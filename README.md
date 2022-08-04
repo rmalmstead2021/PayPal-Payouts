@@ -6,8 +6,4 @@ To create a sandbox app, or live app, log into Paypal and navigate to: https://d
 
 Edit the {Your Company Name} variable, which will be shown in the subject line of the notification email sent to the payee.
 
-CSV File format is as follows.
-*************Field headers*************************
-name,email,amount,notes
-*************Data**********************************
-Mary Jane,mjane@somewhere.com,1.00,For gum.
+
