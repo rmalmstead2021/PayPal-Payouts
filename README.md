@@ -6,6 +6,6 @@ To create a sandbox app, or live app, log into Paypal and navigate to: https://d
 
 CSV File format is as follows.
 *************Field headers*************************
-name,email,amount,notes\r\n
+name,email,amount,notes
 *************Data**********************************
 Mary Jane,mjane@somewhere.com,1.00,For gum.
