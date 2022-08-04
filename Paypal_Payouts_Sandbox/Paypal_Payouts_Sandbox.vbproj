@@ -143,6 +143,7 @@
     <Content Include="Scripts\jquery-3.6.0.min.js" />
     <Content Include="Scripts\jquery-3.6.0.slim.js" />
     <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
+    <Content Include="Scripts\paypal-payouts.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
