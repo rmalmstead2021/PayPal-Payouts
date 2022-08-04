@@ -5,6 +5,7 @@ Edit the Payouts.html file, and update the {Client_ID} and {Client_Secret} to ma
 To create a sandbox app, or live app, log into Paypal and navigate to: https://developer.paypal.com/developer/applications
 
 CSV File format is as follows.
-**************************************
+*************Field headers*************************
 name,email,amount,notes
+*************Data**********************************
 Mary Jane,mjane@somewhere.com,1.00,For gum.
