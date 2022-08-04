@@ -14,4 +14,5 @@ CSV File format is as follows:
 
 
 name,email,amount,notes
+
 Mary Jane,mjane@somewhere.com,1.00,For gum.
