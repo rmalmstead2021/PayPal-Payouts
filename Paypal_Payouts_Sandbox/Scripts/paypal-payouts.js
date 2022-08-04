@@ -4,11 +4,6 @@ let payout_url = "https://api.sandbox.paypal.com/v1/payments/payouts"
 let payouts_batch_url = 'https://api.sandbox.paypal.com/v1/payments/payouts/'
 let btn_send_to_paypal = document.getElementById('btn_send_to_paypal');
 
-//Replace with your client_ID and Client for sandbox or live app on paypal.
-//https://developer.paypal.com/developer/applications
-let client_id = 'CLIENT_ID';
-let client_secret = 'CLIENT_SECRET';
-
 let access_token = '';
 
 
@@ -20,7 +15,7 @@ console.log("Batch_ID: " + batch_id)
 //initialize the json data
 let json_data = {
     "sender_batch_header": {
-        "email_subject": "Paypal Payment from: {Your Company Name}",
+        "email_subject": "Paypal Payment from: " + company_name,
         "sender_batch_id": "batch-" + batch_id
     },
     "items": []
