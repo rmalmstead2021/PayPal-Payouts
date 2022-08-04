@@ -1,5 +1,5 @@
 # PayPal-Payouts
-Allows mass payouts from a *.csv file, on a standalone HTML page, using the email address of the payee.
+Enables Paypal users to send mass payouts from a *.csv file, on a standalone HTML page, using the email address of the payee.
 The project is in Visual Studio, but does not require visual studio to run.  It can be ran directly from a folder, using Payouts.html and the required sub directories/dependancies.
 
 To get started...
